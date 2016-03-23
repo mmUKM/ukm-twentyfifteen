@@ -1,0 +1,25 @@
+{
+  "name": "ukm-twentyfifteen",
+  "version": "2.1.7",
+  "homepage": "https://github.com/mmUKM/ukm-twentyfifteen",
+  "authors": [
+    "Jamaludin Rajalu"
+  ],
+  "description": "Official WordPress CMS Theme for UKM",
+  "main": "index.php",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "ukm",
+    "ukmtheme"
+  ],
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "CMB2": "https://github.com/WebDevStudios/CMB2.git#~2.2.1",
+    "TGM-Plugin-Activation": "https://github.com/TGMPA/TGM-Plugin-Activation.git#~2.5.2",
+    "fitvids": "~1.1.0",
+    "uikit": "~2.25.0",
+    "jqnewsTicker": "https://github.com/jayeshmagare/jqnewsTicker.git#~1.0.2"
+  }
+}
