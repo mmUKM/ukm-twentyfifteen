@@ -13,15 +13,15 @@ get_header(); ?>
 
   <?php
 
-    $staff = new WP_Query( array( 
+    $query = new WP_Query( array( 
       'post_type'       => 'staff',
-      'position'        => get_the_term_list( $post->ID, 'position' ),
+      'position'        => get_query_var( 'position' ),
       'posts_per_page'  => -1, 
       'orderby'         => 'menu_order', 
       'order'           => 'ASC' 
     ));
 
-    while ( $staff->have_posts() ) : $staff->the_post();
+    while ( $query->have_posts() ) : $query->the_post();
   ?>
   <div class="column bottom-divider">
     <div class="sm-col-3-12">
@@ -43,7 +43,7 @@ get_header(); ?>
       <div class="staff-detail pad-left">
         <h3><?php the_title(); ?></h3>
         <ul>
-          <li><?php echo get_the_term_list( $post->ID, 'position', '', ', ', '' ); ?></li>
+          <li><?php echo get_the_term_list( $post->ID, 'position', '', '<br>', '' ); ?></li>
           <li><i class="uk-icon-phone-square"></i> <?php echo get_post_meta( get_the_ID(), 'ut_staff_phone', true ); ?></li>
           <li><i class="uk-icon-envelope-square"></i> <?php echo get_post_meta( get_the_ID(), 'ut_staff_email', true ); ?></li>
         </ul>

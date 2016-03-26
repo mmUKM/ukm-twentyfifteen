@@ -11,14 +11,14 @@ get_header(); ?>
       <?php
       $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 
-      $arg = new WP_Query( array( 
+      $query = new WP_Query( array( 
         'post_type'       => 'publication',
-        'pubcat'          => get_the_term_list( $post->ID, 'pubcat' ),
+        'pubcat'          => get_query_var( 'pubcat' ),
         'posts_per_page'  => 10,
         'paged'           => $paged,
       ));
       
-      if ( $arg->have_posts() ) : while ( $arg->have_posts() ) : $arg->the_post(); ?>
+      if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
         <div class="column bottom-divider">
           <div class="col-2-12 pad-right">
             <?php
