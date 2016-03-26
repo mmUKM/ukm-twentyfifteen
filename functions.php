@@ -123,7 +123,6 @@ add_action( 'after_setup_theme', 'ukmtheme_module' );
     function ukmtheme_module() {
       require( get_template_directory() . '/inc/theme-archive-links.php' );
       require( get_template_directory() . '/inc/theme-customizer.php' );
-      require( get_template_directory() . '/inc/theme-dashboard.php' );
       require( get_template_directory() . '/inc/theme-metabox.php' );
       require( get_template_directory() . '/inc/theme-walker-menu.php' );
       require( get_template_directory() . '/inc/theme-login.php' );

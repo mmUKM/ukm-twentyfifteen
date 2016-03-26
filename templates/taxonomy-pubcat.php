@@ -13,7 +13,7 @@ get_header(); ?>
 
       $arg = new WP_Query( array( 
         'post_type'       => 'publication',
-        'pubcat'        => get_the_term_list( $post->ID, 'pubcat' ),
+        'pubcat'          => get_the_term_list( $post->ID, 'pubcat' ),
         'posts_per_page'  => 10,
         'paged'           => $paged,
       ));
@@ -22,7 +22,7 @@ get_header(); ?>
         <div class="column bottom-divider">
           <div class="col-2-12 pad-right">
             <?php
-              $pub_cover = get_post_meta($post->ID,'ut_publication_cover',true);
+              $pub_cover = get_post_meta( $post->ID,'ut_publication_cover',true );
               if ( $pub_cover ) { ?>
               <img src="<?php echo $pub_cover; ?>" width="130" height="165" alt="<?php the_title(); ?>">
               <?php }
@@ -35,11 +35,11 @@ get_header(); ?>
           <div class="col-10-12 pad-left">
             <h3><?php the_title(); ?></h3>
             <table>
-              <tr><td><?php _e('Author','ukmtheme'); ?></td><td>:&nbsp;<?php echo get_post_meta($post->ID, 'ut_publication_author', true); ?></td></tr>
-              <tr><td><?php _e('Publisher','ukmtheme'); ?></td><td>:&nbsp;<?php echo get_post_meta($post->ID, 'ut_publication_publisher', true); ?></td></tr>
-              <tr><td><?php _e('Year','ukmtheme'); ?></td><td>:&nbsp;<?php echo get_post_meta($post->ID, 'ut_publication_year', true); ?></td></tr>
-              <tr><td><?php _e('Number of Pages','ukmtheme'); ?></td><td>:&nbsp;<?php echo get_post_meta($post->ID, 'ut_publication_pages', true); ?></td></tr>
-              <tr><td><?php _e('Reference/Download','ukmtheme'); ?></td><td>:&nbsp;<a href="<?php echo get_post_meta($post->ID, 'ut_publication_reference', true); ?>"><?php _e('Click here','ukmtheme') ?></a></td></tr>
+              <tr><td><?php _e( 'Author','ukmtheme' ); ?></td><td>:&nbsp;<?php echo get_post_meta( $post->ID, 'ut_publication_author', true ); ?></td></tr>
+              <tr><td><?php _e( 'Publisher','ukmtheme' ); ?></td><td>:&nbsp;<?php echo get_post_meta( $post->ID, 'ut_publication_publisher', true ); ?></td></tr>
+              <tr><td><?php _e( 'Year','ukmtheme' ); ?></td><td>:&nbsp;<?php echo get_post_meta( $post->ID, 'ut_publication_year', true ); ?></td></tr>
+              <tr><td><?php _e( 'Number of Pages','ukmtheme' ); ?></td><td>:&nbsp;<?php echo get_post_meta( $post->ID, 'ut_publication_pages', true ); ?></td></tr>
+              <tr><td><?php _e( 'Reference/Download','ukmtheme' ); ?></td><td>:&nbsp;<a href="<?php echo get_post_meta( $post->ID, 'ut_publication_reference', true ); ?>"><?php _e('Click here','ukmtheme') ?></a></td></tr>
             </table>
           </div>
         </div>

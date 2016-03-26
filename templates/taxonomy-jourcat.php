@@ -13,6 +13,7 @@ get_header(); ?>
 
       $arg = new WP_Query( array( 
         'post_type'       => 'journal',
+        'jourcat'         => get_the_term_list( $post->ID, 'jourcat' ),
         'posts_per_page'  => 10,
         'paged'           => $paged,
       ));
@@ -21,10 +22,10 @@ get_header(); ?>
       <div class="column">
         <div class="col-11-12">
           <h3><?php the_title(); ?></h3>
-          <p><em><?php echo get_post_meta($post->ID, 'ut_journal_author', true); ?></em></p>
+          <p><em><?php echo get_post_meta( $post->ID, 'ut_journal_author', true ); ?></em></p>
         </div>
         <div class="col-1-12">
-          <i class="uk-icon-file-pdf-o"></i>&nbsp;<a href="<?php echo get_post_meta($post->ID, 'ut_journal_reference', true); ?>"><?php _e( 'Download', 'ukmtheme' ); ?></a>
+          <i class="uk-icon-file-pdf-o"></i>&nbsp;<a href="<?php echo get_post_meta( $post->ID, 'ut_journal_reference', true ); ?>"><?php _e( 'Download', 'ukmtheme' ); ?></a>
         </div>
       </div>
       <hr>
