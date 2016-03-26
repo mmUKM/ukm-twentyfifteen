@@ -13,14 +13,14 @@
     
     $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 
-    $arg = new WP_Query( array( 
+    $query = new WP_Query( array( 
       'post_type'       => 'gallery',
-      'galcat'          => get_the_term_list( $post->ID, 'galcat' ),
+      'galcat'          => get_query_var( 'galcat' ),
       'posts_per_page'  => 10,
       'paged'           => $paged
     ));
     
-      if ( $arg->have_posts() ) : while ( $arg->have_posts() ) : $arg->the_post();
+      if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
     ?>
     <div class="column bottom-divider">
       <div class="col-3-12 pad-right">

@@ -8,7 +8,16 @@ get_header(); ?>
 <div class="wrap column">
   <article class="article col-8-12">
     <h2><?php _e( 'Video', 'ukmtheme' ); ?>:&nbsp;<?php single_cat_title(); ?></h2>
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <?php
+      
+      $query = new WP_Query( array( 
+        'post_type'       => 'video',
+        'position'        => get_query_var( 'video' ),
+        'posts_per_page'  => 10,
+      ));
+      
+      
+      while ( $query->have_posts() ) : $query->the_post(); ?>
         <div class="column">
           <div class="col-3-12">
             <?php
@@ -32,11 +41,8 @@ get_header(); ?>
             <p><?php echo get_post_meta( get_the_ID(), 'ut_video_desc', 1 ); ?></p>
           </div>
         </div>
-    <hr>
-      <?php endwhile; else: ?>
-        <p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'ukmtheme' ); ?></p>
-        <?php get_search_form(); ?>
-      <?php endif; ?>
+      <hr>
+      <?php endwhile; ?>
     <p><?php get_template_part( 'templates/content', 'paginate' ); ?></p>
   </article>
   <aside class="aside col-4-12">
