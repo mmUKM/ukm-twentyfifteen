@@ -1,8 +1,8 @@
 === UKM Twenty Fifteen ===
 Contributors: Jamaludin Rajalu
 Requires at least: WordPress 4.4
-Tested up to: WordPress 4.4
-Version: 2.2.1
+Tested up to: WordPress 4.5-RC1
+Version: 2.2.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: red, two column, three column, four column, responsive design
@@ -15,7 +15,7 @@ WordPress theme for UKM website and other departments under UKM.
 * Custom Logo
 * Social Links
 * Post Formats
-* The GPL v3.0 or later license. :) Use it to make something cool.
+* The GPL v2.0 or later license. :) Use it to make something cool.
 
 For more information about UKM Twenty Fifteen please go to https://github.com/mmUKM/ukm-twentyfifteen.
 

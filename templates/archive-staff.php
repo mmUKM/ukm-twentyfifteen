@@ -20,7 +20,7 @@ get_header(); ?>
 
       if ( $staff->have_posts() ) : while ( $staff->have_posts() ) : $staff->the_post();
     ?>
-    <div class="column bottom-divider">
+    <div class="column">
       <div class="sm-col-3-12">
           <div class="staff-photo pad-right">
             <?php
@@ -37,10 +37,10 @@ get_header(); ?>
       </div>
 
       <div class="sm-col-9-12">
-        <div class="staff-detail pad-top pad-left">
+        <div class="staff-detail pad-left">
           <?php the_title( '<h3>', '</h3>' ); ?>
           <ul>
-            <li><?php echo get_the_term_list( $post->ID, 'position', '', ', ', '' ); ?></li>
+            <li><?php echo get_the_term_list( $post->ID, 'position', '', '<br>', '' ); ?></li>
             <li><i class="uk-icon-phone-square"></i> <?php echo get_post_meta($post->ID, 'ut_staff_phone', true); ?></li>
             <li><i class="uk-icon-envelope-square"></i> <?php echo get_post_meta($post->ID, 'ut_staff_email', true); ?></li>
           </ul>
@@ -68,6 +68,7 @@ get_header(); ?>
         </div>
       </div>
     </div>
+    <hr>
     <?php endwhile; else: ?>
     <p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'ukmtheme' ); ?></p>
     <?php get_search_form(); ?>

@@ -19,11 +19,12 @@ get_header(); ?>
       
       if ( $arg->have_posts() ) : while ( $arg->have_posts() ) : $arg->the_post(); ?>
       <div class="column">
-        <div class="col-11-12">
-          <h3><?php the_title(); ?></h3>
-          <p><em><?php echo get_post_meta($post->ID, 'ut_journal_author', true); ?></em></p>
+        <div class="col-10-12">
+          <?php the_title( '<h3>', '</h3>' ); ?>
+          <p><em><?php echo get_post_meta( $post->ID, 'ut_journal_author', true ); ?></em><br>
+          <?php echo get_the_term_list( $post->ID, 'jourkey', _e( 'Keywords: ', 'ukmtheme' ), ', ', '' ); ?></p>
         </div>
-        <div class="col-1-12">
+        <div class="col-2-12">
           <i class="uk-icon-file-pdf-o"></i>&nbsp;<a href="<?php echo get_post_meta($post->ID, 'ut_journal_reference', true); ?>"><?php _e( 'Download', 'ukmtheme' ); ?></a>
         </div>
       </div>
