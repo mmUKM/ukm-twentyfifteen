@@ -18,13 +18,13 @@ $pages_args = array(
     'post_status' => 'publish'
 ); 
  
-$ukmtheme_sitemap .= _e( '<h3>Pages</h3>','ukmtheme' );
+$ukmtheme_sitemap .= '<h3>'. _e( 'Pages', 'ukmtheme' ) .'</h3>';
 $ukmtheme_sitemap .= '<ul>';
 $pages = get_pages($pages_args); 
 foreach ( $pages as $page ) :
 $ukmtheme_sitemap .= '<li class="pages-list"><a href="'.get_page_link( $page->ID ).'" rel="bookmark">'.$page->post_title.'</a></li>';
 endforeach;
-$ukmtheme_sitemap .= '<ul>';
+$ukmtheme_sitemap .= '</ul>';
  
 return $ukmtheme_sitemap;
 }
