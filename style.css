@@ -1,7 +1,7 @@
 /*
 Theme Name: UKM Twenty Fifteen
 Theme URI: https://github.com/mmUKM/ukm-twentyfifteen
-Version: 2.2.0
+Version: 2.2.1
 Description: WordPress Theme for Official Site of Universiti Kebangsaan Malaysia
 Author: Jamaludin Rajalu
 Author URI: https://www.facebook.com/jrajalu
@@ -868,9 +868,13 @@ html, body {
   padding: 20px 10px 20px 10px;
 }
 
+.staff-detail h3 {
+  margin: 0 0 5px 0;
+}
 .staff-detail ul {
   list-style-type: none;
   padding-left: 0;
+  margin-top: 0;
 }
 
 .press-release li {
