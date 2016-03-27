@@ -8,7 +8,7 @@
 get_header(); ?>
 <div class="wrap column">
   <article class="article col-8-12">
-    <h2><?php echo __( 'Appreciation', 'ukmtheme' ) ?></h2>
+    <h2><?php _e( 'Appreciation', 'ukmtheme' ) ?></h2>
       <?php
       
         $appreciation = new WP_Query( array( 

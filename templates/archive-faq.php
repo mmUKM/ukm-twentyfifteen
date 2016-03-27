@@ -16,7 +16,7 @@ get_header();
 ?>
 <div class="wrap column">
   <article class="article col-8-12">
-  <h2><?php echo __( 'Frequently Asked Questions', 'ukmtheme' ) ?></h2>
+  <h2><?php _e( 'Frequently Asked Questions', 'ukmtheme' ) ?></h2>
     <ol class="uk-accordion" data-uk-accordion="{showfirst: false}">
       <?php while ( $arg->have_posts() ) : $arg->the_post(); ?>
         <li class="uk-accordion-title"><?php the_title(); ?></li>
