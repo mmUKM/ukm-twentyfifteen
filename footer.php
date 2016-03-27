@@ -3,7 +3,6 @@
  * @package UKMTheme
  * @subpackage UKM Twenty Fifteen
  * @version 1.0
- * @author Jamaludin Rajalu
  */
 $counter = get_option( 'ukmtheme_visitor_counter' );
 
@@ -31,9 +30,6 @@ $counter = get_option( 'ukmtheme_visitor_counter' );
     </div>
   </div>
 </div>
-<?php
-  wp_footer();
-  echo '<!-- Version-' . wp_get_theme()->get( 'Version' ) . ' -->';
-?>
+<?php wp_footer(); ?>
 </body>
-</html>
+</html><?php echo '<!-- UKM Twenty Fifteen v-' . wp_get_theme()->get( 'Version' ) . ' @http://www.ukm.my/templates -->'; ?>
