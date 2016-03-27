@@ -543,7 +543,7 @@ add_action( 'cmb2_init', 'ukmtheme_journal_metaboxes' );
 
     $journal->add_field( array(
       'name'    => __( 'Author', 'ukmtheme' ),
-      'desc'    => __( 'e.g. Jamaludin Rajalu', 'ukmtheme' ),
+      'desc'    => __( 'e.g. Jamaludin Rajalu, Meor Sony Hermi, Faril Izaldi, Muhammad Zaidi. Separate names with commas', 'ukmtheme' ),
       'id'      => $prefix . 'journal_author',
       'type'    => 'text',
     ) );

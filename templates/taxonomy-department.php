@@ -23,7 +23,7 @@ get_header(); ?>
 
     while ( $query->have_posts() ) : $query->the_post();
   ?>
-  <div class="column bottom-divider">
+  <div class="column">
     <div class="sm-col-3-12">
         <div class="staff-photo pad-right">
           <?php
@@ -40,7 +40,7 @@ get_header(); ?>
     </div>
 
     <div class="sm-col-9-12">
-      <div class="staff-detail pad-top pad-left">
+      <div class="staff-detail pad-left">
         <?php the_title( '<h3>', '</h3>' ); ?>
         <ul>
           <li><?php echo get_the_term_list( $post->ID, 'position', '', '<br>', '' ); ?></li>
@@ -71,6 +71,7 @@ get_header(); ?>
       </div>
     </div>
   </div>
+  <hr>
   <?php endwhile; ?>
 </article>
 <aside class="aside col-4-12">
