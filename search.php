@@ -12,7 +12,7 @@ get_header(); ?>
     <?php get_search_form(); ?>
     <?php while ( have_posts() ) : the_post(); ?>
     <h3><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h3>
-    <?php the_excerpt(); ?>
+    <?php the_content(); ?>
     <?php endwhile;?>
   </article>
 </div>
