@@ -270,19 +270,24 @@ if (!function_exists('ukmtheme_widgets_init')) {
 }
 
 /**
- * Searchform HTML5
- * @link http://codex.wordpress.org/Function_Reference/get_search_form
+ * Generate custom search form
+ *
+ * @param string $form Form HTML.
+ * @return string Modified form HTML.
+ * 
+ * @param string $form
+ * @return string
  */
-
 function ukmtheme_search_form( $form ) {
-  $form = '<form role="search" method="get" class="uk-form" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-  <input type="search" class="search-field" placeholder="' . esc_attr__( 'Search...','ukmtheme' ) . '" value="' . get_search_query() . '" name="s" id="s" />
-  <button class="search-submit uk-button uk-button-primary" id="searchsubmit">'. esc_attr__( 'Search' ) .'</button>
-  </form>';
-
-  return $form;
+    $form = '<form role="search" method="get" id="searchform" class="uk-form searchform" action="' . home_url( '/' ) . '" >
+    <div><label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
+    <input type="text" value="' . get_search_query() . '" name="s" id="s" />
+    <button class="uk-button uk-button-primary" type="submit" id="searchsubmit" >'. esc_attr__( 'Search' ) .'</button>
+    </div>
+    </form>';
+ 
+    return $form;
 }
-
 add_filter( 'get_search_form', 'ukmtheme_search_form' );
 
 /**
