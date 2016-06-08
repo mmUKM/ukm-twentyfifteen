@@ -1,11 +1,11 @@
 {
   "name": "ukm-twentyfifteen",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "WordPress Theme for Official Site of Universiti Kebangsaan Malaysia",
   "author": "Jamaludin Rajalu",
   "license": "GPL-2.0",
-  "details_url": "https://cdn.rawgit.com/mmUKM/ukm-twentyfifteen/master/readme.txt",
-  "download_url": "https://github.com/mmUKM/ukm-twentyfifteen/archive/master.zip",
+  "details_url": "https://cdn.rawgit.com/mmUKM/ukm-twentyseventeen/master/readme.txt",
+  "download_url": "https://github.com/mmUKM/ukm-twentyseventeen/archive/master.zip",
   "repository": {
     "type": "git",
     "url": "https://github.com/mmUKM/ukm-twentyfifteen"
